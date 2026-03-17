@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muscle Groups</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #5d5d5d;
+        }
+        .container {
+            display: none;
+            background-color: #ffffff;
+            padding: 20px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+        }
+        .logo a{
+	        font-size: 30px;
+	         text-decoration: none;
+	        color:#ffffff;
+	        font-weight: 700;
+        }
+        .logo a span{
+	        color:#c11325;
+        }
+        .nav{
+	        position: fixed;
+	        background-color: transparent;
+	        width: 280px;
+	        top:0;
+	        right:0;
+	        height: 100%;
+	        z-index: 99;
+	        padding:100px 0px 15px; 
+            -webkit-transform: translateX(100%);
+	        transform: translateX(100%);
+	        -webkit-transition: transform .5s ease;
+            transition: transform .5s ease;
+}
+    </style>
+</head>
+<body>
+        <nav>
+            <div class="logo">
+                <a href="intex.html">Muscle <span>Hub</span></a>
+            </div>
+        </nav>
+    
+    <h1>Muscle Groups Information</h1>
+    
+    <div id="Abdominals" class="container">
+        <h2>Abdominals</h2>
+        <p>Exercises: Crunches, Plank, Russian Twist, Leg Raises</p>
+    </div>
+
+    <div id="Obliques" class="container">
+        <h2>Obliques</h2>
+        <p>Exercises: Side Planks, Twisting Sit-ups, Bicycle Crunches</p>
+    </div>
+
+    <div id="Forearms" class="container">
+        <h2>Forearms</h2>
+        <p>Exercises: Wrist Curls, Farmer's Walk, Reverse Curls</p>
+    </div>
+
+    <div id="Biceps" class="container">
+        <h2>Biceps</h2>
+        <p>Exercises: Bicep Curls, Hammer Curls, Concentration Curls</p>
+    </div>
+
+    <div id="Shoulders" class="container">
+        <h2>Shoulders</h2>
+        <p>Exercises: Shoulder Press, Lateral Raises, Front Raises</p>
+    </div>
+
+    <div id="Traps" class="container">
+        <h2>Traps</h2>
+        <p>Exercises: Shrugs, Face Pulls, Upright Rows</p>
+    </div>
+
+    <div id="Chest" class="container">
+        <h2>Chest</h2>
+        <p>Exercises: Push-ups, Bench Press, Chest Fly</p>
+    </div>
+
+    <div id="Quads" class="container">
+        <h2>Quads</h2>
+        <p>Exercises: Squats, Lunges, Leg Press</p>
+    </div>
+
+    <div id="Calves" class="container">
+        <h2>Calves</h2>
+        <p>Exercises: Calf Raises, Seated Calf Raises, Jump Rope</p>
+    </div>
+
+    <script>
+        window.onload = function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const muscle = urlParams.get('muscle');
+            
+            document.querySelectorAll('.container').forEach(container => {
+                container.style.display = 'none';
+            });
+
+            if (muscle && document.getElementById(muscle)) {
+                document.getElementById(muscle).style.display = 'block';
+            } else {
+                alert('Error: Muscle group not found.');
+            }
+        };
+    </script>
+</body>
+</html>

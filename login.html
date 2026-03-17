@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Muscle Hub Login Form</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Quicksand', sans-serif;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: #000;
+      position: relative;
+      overflow: hidden;
+    }
+
+    header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 15px; /* Add some spacing */
+  z-index: 1001; /* Ensure it's above other elements */
+}
+
+
+    header .logo a{
+	font-size: 30px;
+	text-decoration: none;
+	color:#ffffff;
+	font-weight: 700;
+}
+header .logo a span{
+	color:#c11325;
+}
+header .nav{
+	position: fixed;
+	background-color: transparent;
+	width: 280px;
+	top:0;
+	right:0;
+	height: 100%;
+	z-index: 10px 0px 15px; 
+	-webkit-transform: translateX(100%);
+	transform: translateX(100%);
+	-webkit-transition: transform .5s ease;
+    transition: transform .5s ease;
+}
+
+    /* Background Fade Effect */
+    .bgAnimation {
+      position: absolute;
+      top: 0;
+      left: 5;
+      width: 97.7%;
+      height: 100vh;
+      background: linear-gradient(to bottom, rgba(248, 3, 3, 0), rgba(255, 0, 0, 0.81));
+      animation: fadeBackground 6s linear infinite;
+      z-index: -1;
+    }
+
+    @keyframes fadeBackground {
+      0% {
+        transform: translateY(-100%);
+        opacity: 0.3;
+      }
+      50% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(100%);
+        opacity: 0.3;
+      }
+    }
+
+    /* Animated Grid Background */
+    .background-boxes {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: grid;
+      grid-template-columns: repeat(31, 50px);
+      grid-template-rows: repeat(auto-fill, 50px);
+      z-index: 0;
+    }
+
+    .background-boxes div {
+      width: 47px;
+      height: 47px;
+      padding-right: 0px;
+      padding-left: 0px;
+      background: #000000;
+      border-radius: 10px;
+      transition: background 1.3s ease;
+    }
+
+    .background-boxes div:hover {
+      background: rgb(255, 0, 0);
+      transition: 0s;
+    }
+
+    /* Login Box */
+    .signin {
+      position: relative;
+      width: 450px;
+      height: 500px;
+      background: #222;
+      z-index: 1000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      padding-top: 1px;
+      border-radius: 4px;
+      box-shadow: 0 15px 35px rgba(255, 0, 0, 0.5);
+    }
+
+    .signin .content {
+      position: relative;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    .signin .content h2 {
+      font-size: 2em;
+      color: #ff0000;
+      text-transform: uppercase;
+    }
+
+    .signin .content .form {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+    }
+
+    .signin .content .form .inputBox input {
+      width: 100%;
+      background: #272525;
+      border: 2px solid #ff0000;
+      outline: none;
+      padding: 10px;
+      border-radius: 4px;
+      color: #fff;
+      font-size: 1em;
+    }
+
+    .signin .content .form .inputBox input:focus {
+      border: 2px solid #ff0000;
+      background: #444;
+    }
+
+    .signin .content .form .links a {
+      color: #ff0000;
+      text-decoration: none;
+    }
+
+    .signin .content .form .inputBox input[type="submit"] {
+      background: hsl(0, 100%, 50%);
+      color: #000000;
+      font-weight: 600;
+      font-size: 1.35em;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header>
+  <nav>
+    <div class="logo">
+        <a href="index.html">Muscle <span>Hub</span></a>
+    </div>
+  </nav>
+  </header>
+  <div class="bgAnimation"></div>
+
+  <!-- Grid Background Effect -->
+  <div class="background-boxes">
+    <script>
+      for (let i = 0; i < 600; i++) {
+        document.write('<div></div>');
+      }
+    </script>
+  </div>
+
+  <!-- Login Form -->
+  <div class="signin">
+    <div class="content">
+      <h2>Sign In</h2>
+      <div class="form">
+        <form action="login.php" method="POST">
+          <div class="inputBox">
+            <input type="text" name="username" id="username" required placeholder="Username">
+          </div><br><br>
+          <div class="inputBox">
+            <input type="password" name="password" id="password" required placeholder="Password">
+          </div><br>
+          <div class="links">
+            <a href="#">Forgot Password</a><br>
+            <a href="#">Signup</a>
+          </div><br><br>
+          <div class="inputBox">
+            <input type="submit" value="Login">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

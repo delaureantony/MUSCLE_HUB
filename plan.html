@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan Page</title>
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #121212;
+            color: white;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        h1 {
+            color: #ff4d4d;
+            text-align: center;
+        }
+
+        .container {
+            display: none; /* Initially hidden */
+            background-color: #1e1e1e;
+            padding: 0px;
+            border-radius: 10px;
+            margin: 10px 0;
+            width: 120%;
+            height: 100%;
+            text-align: center;
+        }
+
+        button {
+            padding: 12px;
+            background-color: #d81f1f;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 10px;
+        }
+
+        button:hover {
+            background-color: hsl(0, 100%, 51%);
+        }
+    </style>
+</head>
+<body>
+     <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">Muscle <span>Hub</span></a>
+            </div>
+        </div>
+        <div class="right-nav">
+             <span><a href="login.html"><button id="loginBtn">Login</button></a></span>
+           <span><a href="gymassis.html"><img src="chatbot.svg" alt="Chatbot" id="chatbotimg"></a></span>
+        </div>
+    </nav>
+
+    </header>
+
+<h1>Welcome to Your Plan</h1>
+
+<!-- Hidden containers -->
+<div id="container1" class="container">
+    <h2>Underweight Plan</h2>
+</div>
+
+<div id="container2" class="container">
+    <h2>Normal Weight Plan</h2>
+</div>
+
+<div id="container3" class="container">
+    <h2>Overweight Plan</h2>
+</div>
+
+<div id="container4" class="container">
+    <h2>Obesity Plan</h2>
+</div>
+
+<script>
+    window.onload = function() {
+        // Get BMI result from localStorage
+        const bmiResult = localStorage.getItem('bmiResult');
+
+        // Hide all containers
+        const containers = document.querySelectorAll('.container');
+        containers.forEach(container => {
+            container.style.display = 'none';
+        });
+
+        // Show the corresponding container based on BMI result
+        if (bmiResult === 'underweight') {
+            document.getElementById('container1').style.display = 'block';
+        } else if (bmiResult === 'normal') {
+            document.getElementById('container2').style.display = 'block';
+        } else if (bmiResult === 'overweight') {
+            document.getElementById('container3').style.display = 'block';
+        } else if (bmiResult === 'obesity') {
+            document.getElementById('container4').style.display = 'block';
+        } else {
+            alert('Error: BMI result not found.');
+        }
+    };
+</script>
+
+</body>
+</html>

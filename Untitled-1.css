@@ -1,0 +1,41 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Quicksand', sans-serif;
+    }
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: #000;
+      position: relative;
+      overflow: hidden;
+    }
+    .background-boxes {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, 50px);
+      grid-template-rows: repeat(auto-fill, 50px);
+    }
+    .background-boxes div {
+      width: 50px;
+      height: 50px;
+      display: block;
+      background: #000000;
+      z-index: 2;
+      border: 0.1px transparent;
+      transition: background 0.3s ease; /* Smooth transition effect */
+    }
+    .background-boxes div:hover {
+      background: #f00; /* Change background color on hover */
+      transition: 0s;
+    }
+    <div class="background-boxes">
+    <script>
+      for (let i = 0; i < 500; i++) {
+        document.write('<div></div>');
+      }

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #000000;
+            color: white;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .calculator {
+            background-color: #1e1e1e;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 15px 35px rgba(255,0,0,0.5);
+            width: 450px;
+            height: 550px;
+        }
+
+        h1 {
+            text-align: center;
+            color:#c11325;
+            font-size: 28px;
+        }
+
+        label {
+            font-size: 18px;
+            margin-top: 20px;
+            display: block;
+            color: #c11325;
+        }
+
+        input[type="number"] {
+            width: 100%;
+            padding: 12px;
+            margin-top: 8px;
+            border-radius: 8px;
+            border: 2px solid #c11325;
+            background-color: #2d2d2d;
+            color: white;
+            font-size: 16px;
+        }
+
+        button {
+            width: 100%;
+            padding: 14px;
+            background-color:#c1132400;
+            color: rgb(255, 3, 3);
+            border: none;
+            border-radius: 8px;
+            font-size: 24px;
+            cursor: pointer;
+            margin-top: 0px;
+        }
+
+        button:hover {
+            background-color:#f6051d;
+            color: #ffffff;
+        }
+
+        .result {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .result span {
+            color: #c11325;
+        }
+
+        .start-button {
+            margin-top: 30px;
+            padding: 14px;
+            background-color: #03030300;
+            color: #ff041d;
+            border: none;
+            border-radius: 8px;
+            font-size: 28px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .start-button:hover {
+            background-color: #f50808;
+        }
+
+        /* Cursor Trail Line Effect */
+        .cursor-line {
+            position:fixed;
+            width: 5px;
+            height: 5px;
+            background: #ff0000;
+            pointer-events: visibleFill;
+            transform-origin: center;
+            opacity: 100;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">Muscle <span>Hub</span></a>
+            </div>
+        <div class="right-nav">
+            <span><a href="login.html"><button id="loginBtn">Login</button></a></span>
+            <span><a href="gymassis.html"><img src="chatbot.svg" alt="Chatbot" id="chatbotimg"></a></span>
+        </div>
+        </nav>
+    </header>
+
+<div class="calculator">
+    <h1>BMI Calculator</h1>
+    <label for="weight">Weight (kg):</label>
+    <input type="number" id="weight" placeholder="Enter weight in kg" required>
+
+    <label for="height">Height (m):</label>
+    <input type="number" id="height" placeholder="Enter height in meters" required step="0.01">
+    
+    <button onclick="calculateBMI()">Calculate BMI</button>
+
+    <div class="result" id="result"></div>
+
+    <button class="start-button" onclick="startPlan()">Start</button>
+</div>
+
+<script>
+    let bmiResult = '';
+
+    function calculateBMI() {
+        const weight = parseFloat(document.getElementById('weight').value);
+        const height = parseFloat(document.getElementById('height').value);
+
+        if (isNaN(weight) || isNaN(height) || weight <= 0 || height <= 0) {
+            document.getElementById('result').innerText = "Please enter valid weight and height.";
+            return;
+        }
+
+        const bmi = weight / (height * height);
+        let bmiCategory = "";
+
+        if (bmi < 18.5) {
+            bmiCategory = "Underweight";
+            bmiResult = "underweight";
+        } else if (bmi >= 18.5 && bmi < 24.9) {
+            bmiCategory = "Normal weight";
+            bmiResult = "normal";
+        } else if (bmi >= 25 && bmi < 29.9) {
+            bmiCategory = "Overweight";
+            bmiResult = "overweight";
+        } else {
+            bmiCategory = "Obesity";
+            bmiResult = "obesity";
+        }
+
+        document.getElementById('result').innerHTML = `Your BMI is <span>${bmi.toFixed(2)}</span> - <span>${bmiCategory}</span>`;
+    }
+
+    function startPlan() {
+        localStorage.setItem('bmiResult', bmiResult);
+        window.location.href = 'plan.html';
+    }
+
+    // Cursor Trail Line Effect
+    document.addEventListener('mousemove', function(e) {
+        const line = document.createElement('div');
+        line.classList.add('cursor-line');
+        document.body.appendChild(line);
+
+        line.style.left = `${e.clientX}px`;
+        line.style.top = `${e.clientY}px`;
+        line.style.transform = `rotate(${Math.random() * 360}deg)`;
+
+        setTimeout(() => {
+            line.remove();
+        }, 300);
+    });
+</script>
+
+</body>
+</html>

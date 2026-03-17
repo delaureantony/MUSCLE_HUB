@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CoreFitz</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" 
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" 
+        crossorigin="anonymous">
+</head>
+<body class="intex">
+  <nav>
+    <a href="index.html"><h1 class="logo">Fit Club</h1></a>
+    <div class="right-nav">
+      <a href="gymassis.html"><img src="chatbot.svg" alt="img" id="chatbotimg"></a>
+    </div>
+  </nav>
+
+  <div class="container-fluid align-center pt-3">
+    <div class="row text-center">
+      <!-- Left Column: First SVG (e.g. Front or left view) -->
+      <div class="col-md-6">
+        <svg width="85%" height="60%" viewBox="0 0 670 1200" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Abdominals -->
+          <g class="body-map__muscle" id="abdominals">
+            <a href="part.html">
+              <path d="M384.32 490.61C386.41 457.79 ... Z" fill="white" />
+            </a>
+          </g>
+          <!-- Obliques -->
+          <g class="body-map__muscle" id="obliques">
+            <a href="part.html">
+              <path d="M278.25 405.1L278.22 405.27 ... Z" fill="white" />
+              <path d="M460.77 307.59C460.92 307.45 ... Z" fill="white" />
+            </a>
+          </g>
+          <!-- Forearms -->
+          <g class="body-map__muscle" id="forearms">
+            <a href="Forearms.html">
+              <path d="M135.05 418.55C141.32 418.55 ... Z" fill="white" />
+              <path d="M638.96 515.58C640.01 517.47 ... Z" fill="white" />
+            </a>
+          </g>
+          <!-- Biceps -->
+          <g class="body-map__muscle" id="biceps">
+            <a href="Biceps.html">
+              <path d="M207.71 345.02C207.68 345.12 ... Z" fill="white" />
+              <path d="M541.2 335.1C567.3 392.89 ... Z" fill="white" />
+            </a>
+          </g>
+          <!-- Shoulders -->
+          <g class="body-map__muscle" id="shoulders">
+            <a href="Shoulder.html">
+              <path d="M152.89 303.71C152.83 303.75 ... Z" fill="white" />
+              <path d="M400.85 218.61C400.85 218.43 ... Z" fill="white" />
+            </a>
+          </g>
+          <!-- Traps -->
+          <g class="body-map__muscle" id="traps">
+            <a href="Traps.html">
+              <path d="M395.89 217.17C395.84 217.17 ... Z" fill="white" />
+              <path d="M276.58 217.15C273.44 215.93 ... Z" fill="white" />
+            </a>
+          </g>
+          <!-- Chest -->
+          <g class="body-map__muscle" id="chest">
+            <a href="Chest.html">
+              <path d="M277.532 219.782C277.578 219.768 ... Z" fill="white" />
+              <path d="M372.63 332.76C372.54 332.74 ... Z" fill="white" />
+            </a>
+          </g>
+          <!-- Quads -->
+          <g class="body-map__muscle" id="quads">
+            <a href="Quads.html">
+              <path d="M458.96 792.3L458.82 793.02 ... Z" fill="white" />
+              <path d="M267.5 632.08C269.12 646.92 ... Z" fill="white" />
+            </a>
+          </g>
+          <!-- Calves -->
+          <g class="body-map__muscle" id="calves">
+            <a href="Calves.html">
+              <path d="M213.13 880.79C213.65 879.35 ... Z" fill="white" />
+              <path d="M446.26 889.29C450.38 881.96 ... Z" fill="white" />
+              <path d="M419.322 902.906C418.618 902.747 ... Z" fill="white" />
+              <path d="M269.71 893.41C265.24 897.71 ... Z" fill="white" />
+            </a>
+          </g>
+          <!-- Body Model (black outlines or fills) -->
+          <g class="body-map__model">
+            <path d="M342.66 368.05C357.13 367.77 ... Z" fill="black" />
+            <path d="M305.74 379.65L304.48 379.98 ... Z" fill="black" />
+            <path d="M327.31 427.61C319.13 427.51 ... Z" fill="black" />
+            <path d="M336.49 501.6H336.13C335.15 ... Z" fill="black" />
+            <path d="M378.16 420.56H378.13L376.66 ... Z" fill="black" />
+            <path d="M363.955 468.911C367.324 468.678 ... Z" fill="black" />
+            <path d="M368.62 474.46C362.43 474.34 ... Z" fill="black" />
+            <!-- Additional black path (with fill-rule/clip-rule) -->
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M664.702 571.051C669.891 581.221 ... Z" />
+          </g>
+        </svg>
+      </div>
+
+      <!-- Right Column: Second SVG (e.g. Back view or complementary view) -->
+      <div class="col-md-6">
+        <svg width="85%" height="60%" viewBox="10 0 672 1200" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Hamstrings -->
+          <g id="hamstrings" class="body-map__muscle">
+            <a href="Hamstrings.html">
+              <path d="M445.184 807.888C446.787 801.789 ... Z" fill="white" />
+              <path d="M305.441 730.959C305.441 730.925 ... Z" fill="white" />
+            </a>
+          </g>
+          <!-- Lower Back -->
+          <g id="lowerback" class="body-map__muscle">
+            <a href="LowerBack.html">
+              <path d="M378.772 505.052C366.957 502.464 ... Z" fill="white" />
+            </a>
+          </g>
+          <!-- Glutes -->
+          <g id="glutes" class="body-map__muscle">
+            <a href="Glutes.html">
+              <path d="M323.861 612.416V552.278H323.852 ... Z" fill="white" />
+              <path d="M374.572 640.743C382.719 640.238 ... Z" fill="white" />
+            </a>
+          </g>
+          <!-- Lats -->
+          <g id="lats" class="body-map__muscle">
+            <a href="Lats.html">
+              <path d="M454.007 309.662L454.036 309.519 ... Z" fill="white" />
+              <path d="M274.079 475.804C273.574 463.489 ... Z" fill="white" />
+            </a>
+          </g>
+          <!-- Middle Traps -->
+          <g id="traps_middle" class="body-map__muscle">
+            <a href="Traps(Mid-back).html">
+              <path d="M384.871 237.078C366.843 271.303 ... Z" fill="white" />
+            </a>
+          </g>
+          <!-- Full Traps -->
+          <g id="traps" class="body-map__muscle">
+            <a href="Traps.html">
+              <path d="M420.952 210.328C405.051 212.672 ... Z" fill="white" />
+            </a>
+          </g>
+          <!-- Shoulders -->
+          <g id="shoulders" class="body-map__muscle">
+            <a href="Shoulder.html">
+              <path d="M229.447 251.746C239.028 244.299 ... Z" fill="white" />
+              <path d="M491.111 283.345C496.234 283.624 ... Z" fill="white" />
+            </a>
+          </g>
+          <!-- Calves -->
+          <g id="calves" class="body-map__muscle">
+            <a href="Calves.html">
+              <path d="M450.943 1016.66C463.752 1015.89 ... Z" fill="white" />
+              <path d="M263.496 998.655C263.496 998.62 ... Z" fill="white" />
+            </a>
+          </g>
+          <!-- Triceps -->
+          <g id="triceps" class="body-map__muscle">
+            <a href="Triceps.html">
+              <path d="M542.641 384.976C545.908 385.951 ... Z" fill="white" />
+              <path d="M195.254 337.454L195.289 337.401 ... Z" fill="white" />
+            </a>
+          </g>
+          <!-- Forearms -->
+          <g id="forearms" class="body-map__muscle">
+            <a href="Forearms.html">
+              <path d="M622.044 548.592C626.462 546.884 ... Z" fill="white" />
+              <path d="M131.543 425.091C136.582 418.159 ... Z" fill="white" />
+            </a>
+          </g>
+          <!-- Body Model -->
+          <g id="body" class="body-map__model">
+            <path d="M143.332 408.947C143.341 408.935 ... Z" fill="white" />
+          </g>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" 
+          crossorigin="anonymous"></script>
+  <!-- Optional: Your custom JavaScript -->
+  <script src="main.js"></script>
+</body>
+</html>
