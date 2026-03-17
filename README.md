@@ -57,5 +57,5 @@ Delaure Antony
 
 ## Live Demo
 
-https://github.com/delaureantony/MUSCLE_HUB.git
+https://delaureantony.github.io/MUSCLE_HUB/
 
