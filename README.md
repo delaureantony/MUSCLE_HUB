@@ -33,12 +33,6 @@ Muscle Hub is a web-based fitness platform designed to provide interactive exerc
 - Progress Tracker
 - Contact
 
-## Installation
-
-1. Download or clone this repository
-2. Open the project folder
-3. Run `index.html` in your browser
-
 ## Usage
 
 Users can:
@@ -59,9 +53,9 @@ Users can:
 
 ## Author
 
-**Delaure Antony (Rifqa)**
+Delaure Antony
 
 ## Live Demo
 
-Add your GitHub Pages link here after hosting:
+https://github.com/delaureantony/MUSCLE_HUB.git
 
